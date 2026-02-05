@@ -225,11 +225,11 @@ Love u princess ❤️🫂
 
       {/* Start & End */}
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-400">
-        ME
+      ur seifoo 
       </div>
 
       <div className="absolute top-2 left-1/2 -translate-x-1/2 text-xs font-bold text-pink-600">
-        YOU
+        anoud
       </div>
 
       {/* Slider */}
