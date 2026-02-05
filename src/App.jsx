@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Heart, Stars, MapPin, Music, ArrowRight, Home, Sparkles, Coffee, Utensils, Smartphone } from 'lucide-react';
-
+import { Heart, Stars, HouseHeart, Music, ArrowRight, Home, Sparkles, Popcorn, Utensils } from 'lucide-react';
+import SeifVideo from "./assets/Seif.mp4"
 const App = () => {
   const [stage, setStage] = useState('question'); // question, message, journey, video
   const [noButtonState, setNoButtonState] = useState({
@@ -31,10 +31,10 @@ const [celebrated, setCelebrated] = useState([]);
 
   // Milestones for the journey
   const milestones = [
-    { id: 1, label: "Started", icon: <Home size={14} />, threshold: 20, memory: "That first spark..." },
-    { id: 2, label: "Dates", icon: <Coffee size={14} />, threshold: 40, memory: "When I knew you were special." },
-    { id: 3, label: "Laughter", icon: <Utensils size={14} />, threshold: 60, memory: "Every moment is a gift." },
-    { id: 4, label: "Forever", icon: <Sparkles size={14} />, threshold: 80, memory: "I love you more every day." },
+    { id: 1, label: "3/9/2025", icon: <Heart size={14}/>, threshold: 20, memory: "That first spark..." },
+    { id: 2, label: "First Date (15/9/2025)", icon: <Popcorn size={14} />, threshold: 40, memory: "When I knew you were special." },
+    { id: 3, label: "Memories", icon: <HouseHeart size={14} />, threshold: 60, memory: "Every moment with you is a blessing." },
+    { id: 4, label: "Forever", icon: <Home size={14} />, threshold: 80, memory: "Forever you well be 我的宝贝 ❤️" },
   ];
 
   const handleNoInteraction = useCallback(() => {
@@ -133,9 +133,23 @@ const handleProgress = (value) => {
         {stage === 'message' && (
           <div className="space-y-6 animate-in slide-in-from-bottom duration-500">
             <h2 className="text-5xl">💖</h2>
-            <h1 className="text-3xl font-bold text-pink-600 italic">"I knew you'd say yes!"</h1>
+            <h1 className="text-3xl font-bold text-pink-600 italic">"I knew you'd say yes! So i wrote you this!"</h1>
             <div className="bg-pink-100/50 p-6 rounded-2xl text-lg leading-relaxed text-slate-700 border-l-4 border-pink-400">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur minima nostrum, harum iste iure numquam quod praesentium quae sunt reprehenderit. Optio totam voluptatibus deleniti ad a quas voluptatem atque voluptatum?
+To my cute little baby
+<br />
+Since the day i met you, u have been the most precious, important thing in my day can’t imagine a day without talking to my sweet little angel.
+I have experienced a new kind of love since i knew the truth about my feelings for you, 
+<br />
+You are my favorite part of this year and will be my favorite of every year.
+You can’t imagine how lucky i am for having you in my life 
+<br />
+Can’t wait to make much more memories with the LOML.
+<br />
+Thank you for being the brightest part of my 
+ days and for loving me the way you do. I cherish you more than you know.
+I love you yesterday, now and always 
+FOR EVER U WILL BE MY BABY.
+Love u princess ❤️🫂
             </div>
             <button
               onClick={() => setStage('journey')}
@@ -274,21 +288,21 @@ const handleProgress = (value) => {
               <Music className="text-pink-400 animate-bounce" style={{ animationDelay: '0.3s'}} />
             </div>
 
-            <div className="relative aspect-video bg-slate-900 rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white ring-1 ring-pink-100">
+            <div className="relative mx-auto aspect-video h-[500px] w-[300px] bg-slate-900 rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white ring-1 ring-pink-100">
               <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&modestbranding=1" 
+                className="w-full h-full object-cover"
+                src={SeifVideo}
                 title="Valentine's Surprise"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-              <div className="absolute inset-0 pointer-events-none border-[12px] border-white/10 rounded-[1.5rem]"></div>
+              <div className="absolute inset-0 pointer-events-none rounded-[1.5rem] mx-auto"></div>
             </div>
 
             <div className="p-4 space-y-4">
               <p className="text-slate-700 italic text-lg leading-relaxed">
-                "I hope this brought a smile to your face. You're my favorite adventure."
+                "I hope this brought a smile to your face. You are my everything, and I can't wait to create more beautiful memories together. Happy Valentine's Day, mi vida ❤️🫂!"
               </p>
               
               <div className="flex justify-center gap-2">
